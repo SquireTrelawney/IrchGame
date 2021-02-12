@@ -44,4 +44,11 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         app:srcCompat="@drawable/zmeya_8" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        tools:srcCompat="@tools:sample/avatars" />
 </LinearLayout>
