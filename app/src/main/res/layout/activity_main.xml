@@ -15,7 +15,7 @@
 
     <Button
         android:id="@+id/button6"
-        android:layout_width="wrap_content"
+        android:layout_width="139dp"
         android:layout_height="wrap_content"
         android:background="@drawable/b1_8"
         android:fontFamily="serif"
@@ -34,7 +34,15 @@
 
     <Button
         android:id="@+id/button7"
-        android:layout_width="wrap_content"
+        android:layout_width="65dp"
         android:layout_height="wrap_content"
         android:background="@drawable/budda_8" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="123dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/zmeya_8" />
+
 </LinearLayout>
