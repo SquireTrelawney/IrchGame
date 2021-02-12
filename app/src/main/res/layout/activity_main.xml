@@ -38,6 +38,13 @@
         android:layout_height="wrap_content"
         android:background="@drawable/budda_8" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="32dp"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:text="TextView" />
+
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="123dp"
