@@ -30,7 +30,9 @@
         android:textIsSelectable="true"
         android:textScaleX="1"
         android:textSize="40sp"
-        android:textStyle="normal" />
+        android:textStyle="normal"
+        android:layout_margin="20dp"
+        />
 
     <Button
         android:id="@+id/button7"
