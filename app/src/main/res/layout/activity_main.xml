@@ -14,13 +14,13 @@
     tools:context=".MainActivity">
 
     <Button
-        android:onClick="open_map"
         android:id="@+id/button6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/b1_8"
         android:fontFamily="serif"
         android:includeFontPadding="true"
+        android:onClick="open_map"
         android:text="истрия"
         android:textAlignment="gravity"
         android:textAllCaps="false"
