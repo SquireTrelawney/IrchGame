@@ -30,6 +30,7 @@ class Separation_Puzzle : AppCompatActivity() {
         }
         override fun onFinish() {
             TextView.text = "GAME OVER"
+            game_over()
         }
     }
 
@@ -45,6 +46,7 @@ class Separation_Puzzle : AppCompatActivity() {
 
                 override fun onFinish() {
                     TextView.text = "GAME OVER"
+                    game_over()
                 }
             }
         }
@@ -58,6 +60,7 @@ class Separation_Puzzle : AppCompatActivity() {
 
                 override fun onFinish() {
                     TextView.text = "GAME OVER"
+                    game_over()
                 }
             }
         }
@@ -70,6 +73,7 @@ class Separation_Puzzle : AppCompatActivity() {
         timer.start()
         imageView6.setImageBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.ind_8))
         imageView7.setImageBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.indus_8))
+        TextScore2.text = score.toString()
         update_img(imageView5, mid_image)
     }
 
@@ -90,6 +94,7 @@ class Separation_Puzzle : AppCompatActivity() {
             update_img(view, mid_image)
             timer.cancel()
             score += 1
+            TextScore2.text = score.toString()
             restart_timer(score.toLong())
         }
         else{
@@ -104,6 +109,7 @@ class Separation_Puzzle : AppCompatActivity() {
             update_img(view, mid_image)
             timer.cancel()
             score += 1
+            TextScore2.text = score.toString()
             restart_timer(score.toLong())
         }
         else{
@@ -116,6 +122,7 @@ class Separation_Puzzle : AppCompatActivity() {
     fun game_over(){
         button_left.setVisibility(View.GONE)
         button_right.setVisibility(View.GONE)
+        TextScore2.setVisibility(View.GONE)
         TextScore.text = "Ваш счёт: " + score.toString()
         TextScore.setVisibility(View.VISIBLE)
     }

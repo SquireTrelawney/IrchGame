@@ -24,9 +24,10 @@
         android:layout_height="137dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.166"
+        app:layout_constraintVertical_bias="0.167"
         tools:srcCompat="@drawable/slon_8" />
 
     <ImageView
@@ -91,5 +92,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TextView"
         app:layout_constraintVertical_bias="0.353" />
+
+    <TextView
+        android:id="@+id/TextScore2"
+        android:layout_width="144dp"
+        android:layout_height="77dp"
+        android:gravity="center"
+        android:text="22222"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_right"
+        app:layout_constraintHorizontal_bias="0.396"
+        app:layout_constraintStart_toEndOf="@+id/button_left"
+        app:layout_constraintTop_toBottomOf="@+id/TextView"
+        app:layout_constraintVertical_bias="0.226" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
