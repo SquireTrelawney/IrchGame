@@ -15,4 +15,10 @@ class Puzzles : AppCompatActivity() {
         val window = Intent(this, Separation_Puzzle::class.java)
         startActivity(window)
     }
+
+    fun open_shadows(view: View) {
+        val window = Intent(this, shadows_puzzle::class.java)
+        startActivity(window)
+    }
+
 }
