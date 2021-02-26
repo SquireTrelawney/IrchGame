@@ -18,20 +18,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/b1_8"
+        android:onClick="open_map"
         android:fontFamily="serif"
         android:includeFontPadding="true"
-        android:onClick="open_map"
-        android:text="истрия"
+        android:text="@string/история"
         android:textAlignment="gravity"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#C50BE4"
         android:textColorHighlight="#2EE619"
-        android:textDirection="firstStrongLtr"
+
+        android:textDirection="ltr"
         android:textIsSelectable="true"
         android:textScaleX="1"
+
         android:textSize="40sp"
-        android:textStyle="normal" />
+        android:textStyle="normal"
+        android:layout_margin="20dp"
+        />
 
     <Button
         android:onClick="open_puzzles"

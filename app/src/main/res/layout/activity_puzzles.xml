@@ -33,7 +33,8 @@
                 android:id="@+id/button4"
                 android:layout_width="139dp"
                 android:layout_height="match_parent"
-                android:text="Button" />
+                android:onClick="open_store_puzzle"
+                android:text="Магазин" />
 
             <Button
                 android:id="@+id/button"
