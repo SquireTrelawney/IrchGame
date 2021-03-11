@@ -2,4 +2,7 @@
     <string name="app_name">IrchGame</string>
     <string name="textik">Textik</string>
     <string name="left">left</string>
+    <string name="text">тени</string>
+    <string name="тени">тени</string>
+    <string name="история">история</string>
 </resources>

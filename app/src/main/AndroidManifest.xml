@@ -9,7 +9,8 @@
         android:roundIcon="@drawable/ind"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Separation_Puzzle"></activity>
+        <activity android:name=".shadows_puzzle"></activity>
+        <activity android:name=".Separation_Puzzle" />
         <activity android:name=".Puzzles" />
         <activity android:name=".Store_Puzzle"></activity>
         <activity android:name=".StoryMap" />
