@@ -13,6 +13,12 @@
     app:layoutDescription="@xml/activity_main_scene"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/testImage"
+        android:layout_width="153dp"
+        android:layout_height="184dp"
+        app:srcCompat="@drawable/ind" />
+
     <Button
 
         android:id="@+id/button6"

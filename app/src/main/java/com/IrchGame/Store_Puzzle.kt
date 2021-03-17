@@ -3,7 +3,6 @@ package com.IrchGame
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.core.view.isVisible
 import kotlinx.android.synthetic.main.activity_store_puzzle.*
 
 class Store_Puzzle() : AppCompatActivity() {
