@@ -6,12 +6,13 @@
     android:layout_height="match_parent"
     android:background="@drawable/fon1_100"
     android:gravity="bottom"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:rotation="0"
     android:scaleX="1"
     android:scaleY="1"
     app:layoutDescription="@xml/activity_main_scene"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    >
 
     <ImageView
         android:id="@+id/testImage"

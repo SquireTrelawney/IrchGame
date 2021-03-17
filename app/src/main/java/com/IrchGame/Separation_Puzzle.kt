@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.View
 import kotlinx.android.synthetic.main.activity_separation__puzzle.*
-import kotlinx.android.synthetic.main.activity_shadows_puzzle.*
 import kotlin.random.Random
 
 

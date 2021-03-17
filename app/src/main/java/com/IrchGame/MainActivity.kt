@@ -1,14 +1,10 @@
 package com.IrchGame
 
 import android.content.Intent
-import android.graphics.drawable.Drawable
-import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageView
 import kotlinx.android.synthetic.main.activity_main.*
-import java.util.*
 
 class MainActivity : AppCompatActivity() {
     val numbers: IntArray = intArrayOf(R.drawable.ind, R.drawable.indus, R.drawable.slon, R.drawable.kobra, R.drawable.lotos)
