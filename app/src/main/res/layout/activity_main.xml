@@ -20,7 +20,6 @@
         app:srcCompat="@drawable/ind" />
 
     <Button
-
         android:id="@+id/button6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,8 +27,7 @@
         android:onClick="open_map"
         android:fontFamily="serif"
         android:includeFontPadding="true"
-        android:text="история"
-
+        android:text="@string/история"
         android:textAlignment="gravity"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
