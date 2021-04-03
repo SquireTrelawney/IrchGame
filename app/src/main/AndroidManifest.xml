@@ -8,8 +8,9 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/ind"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
+
         android:screenOrientation="landscape"
+        android:theme="@style/AppTheme"
         >
         <activity
             android:name=".shadows_puzzle"
@@ -31,6 +32,7 @@
         <activity
             android:name=".MainActivity"
             android:screenOrientation="landscape"
+
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
