@@ -1,16 +1,16 @@
-package com.IrchGame
+package com.IrchGame.StorePuzzle
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import kotlinx.android.synthetic.main.activity_store_puzzle.*
+import com.IrchGame.R
 
-class Store_Puzzle() : AppCompatActivity() {
+class Main() : AppCompatActivity() {
     var countOfDonuts = 5
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_store_puzzle)
-        countOfDonutsText.setText(countOfDonuts.toString())
+//        countOfDonutsText.setText(countOfDonuts.toString())
 
 
     }
@@ -18,14 +18,14 @@ class Store_Puzzle() : AppCompatActivity() {
 
         if (countOfDonuts != 0){
             countOfDonuts--
-            countOfDonutsText.setText(countOfDonuts.toString())
-            checkEndGame()
+//            countOfDonutsText.setText(countOfDonuts.toString())
+//            checkEndGame()
         }
     }
 
     private fun checkEndGame() {
         if(countOfDonuts == 0){
-            congratsText.visibility = View.VISIBLE
+//            congratsText.visibility = View.VISIBLE
         }
     }
 }

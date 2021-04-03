@@ -21,7 +21,7 @@
             />
         <activity android:name=".Puzzles" />
         <activity
-            android:name=".Store_Puzzle"
+            android:name=".StorePuzzle.Main"
             android:screenOrientation="landscape"
             ></activity>
         <activity
