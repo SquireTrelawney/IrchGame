@@ -22,7 +22,7 @@
             />
         <activity android:name=".Puzzles" />
         <activity
-            android:name=".StorePuzzle.Main"
+            android:name=".StorePuzzle.Store_Main"
             android:screenOrientation="landscape"
             ></activity>
         <activity
