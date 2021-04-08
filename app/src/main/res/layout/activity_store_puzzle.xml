@@ -8,6 +8,7 @@
     >
 
     <Button
+        android:onClick="onClick"
         android:id="@+id/btnCookie_2"
         android:layout_width="197dp"
         android:layout_height="105dp"
@@ -19,6 +20,7 @@
         app:layout_constraintVertical_bias="0.941" />
 
     <Button
+        android:onClick="onClick"
         android:id="@+id/btnBun"
         android:layout_width="185dp"
         android:layout_height="115dp"
@@ -30,6 +32,7 @@
         app:layout_constraintVertical_bias="0.94" />
 
     <Button
+        android:onClick="onClick"
         android:id="@+id/btnCake"
         android:layout_width="202dp"
         android:layout_height="104dp"
@@ -42,6 +45,7 @@
         app:layout_constraintVertical_bias="0.951" />
 
     <Button
+        android:onClick="onClick"
         android:id="@+id/btnKeks"
         android:layout_width="212dp"
         android:layout_height="140dp"
@@ -54,6 +58,7 @@
         app:layout_constraintVertical_bias="0.468" />
 
     <Button
+        android:onClick="onClick"
         android:id="@+id/btnWaffle_1"
         android:layout_width="142dp"
         android:layout_height="154dp"
@@ -66,6 +71,7 @@
         app:layout_constraintVertical_bias="0.485" />
 
     <Button
+        android:onClick="onClick"
         android:id="@+id/btnCakeFull"
         android:layout_width="184dp"
         android:layout_height="144dp"
@@ -88,6 +94,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:onClick="onClick"
         android:id="@+id/btnWaffle_2"
         android:layout_width="171dp"
         android:layout_height="107dp"
@@ -97,16 +104,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnCookie_1"
         app:layout_constraintTop_toTopOf="parent"
+
         app:layout_constraintVertical_bias="0.946" />
 
     <Button
+        android:onClick="onClick"
         android:id="@+id/btnCookie_1"
         android:layout_width="170dp"
         android:layout_height="80dp"
         android:layout_marginStart="36dp"
         android:layout_marginBottom="5dp"
         android:background="#00FFFFFF"
-        android:onClick="onCookie_1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -158,7 +166,7 @@
             android:layout_height="match_parent" />
 
         <TextView
-            android:id="@+id/text_oreo"
+            android:id="@+id/text_waffle_2"
             android:layout_width="61dp"
             android:layout_height="match_parent"
             android:gravity="center"
@@ -194,8 +202,8 @@
             android:layout_width="46dp"
             android:layout_height="65dp"
             android:layout_marginStart="4dp"
-            app:layout_constraintStart_toEndOf="@+id/image_3_keks_1"
-            app:layout_constraintTop_toTopOf="@+id/image_3_keks_1"
+            app:layout_constraintStart_toEndOf="@+id/image_1_keks_1"
+            app:layout_constraintTop_toTopOf="@+id/image_1_keks_1"
             app:srcCompat="@drawable/store_keks_1" />
 
         <ImageView
@@ -313,45 +321,45 @@
             app:srcCompat="@drawable/store_cookie_2" />
 
         <ImageView
-            android:id="@+id/image_1_waffle_1"
+            android:id="@+id/image_1_waffle_2"
             android:layout_width="62dp"
             android:layout_height="56dp"
             android:layout_marginStart="52dp"
             android:layout_marginTop="116dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/store_waffle_1" />
+            app:srcCompat="@drawable/store_waffle_2" />
 
         <ImageView
-            android:id="@+id/image_2_waffle_1"
+            android:id="@+id/image_2_waffle_2"
             android:layout_width="62dp"
             android:layout_height="56dp"
             android:layout_marginStart="5dp"
-            app:layout_constraintStart_toEndOf="@+id/image_1_waffle_1"
-            app:layout_constraintTop_toTopOf="@+id/image_1_waffle_1"
-            app:srcCompat="@drawable/store_waffle_1" />
+            app:layout_constraintStart_toEndOf="@+id/image_1_waffle_2"
+            app:layout_constraintTop_toTopOf="@+id/image_1_waffle_2"
+            app:srcCompat="@drawable/store_waffle_2" />
 
         <ImageView
-            android:id="@+id/image_3_waffle_1"
+            android:id="@+id/image_3_waffle_2"
             android:layout_width="62dp"
             android:layout_height="56dp"
             android:layout_marginStart="32dp"
             android:layout_marginBottom="28dp"
-            app:layout_constraintBottom_toBottomOf="@+id/image_1_waffle_1"
-            app:layout_constraintStart_toStartOf="@+id/image_1_waffle_1"
-            app:srcCompat="@drawable/store_waffle_1" />
+            app:layout_constraintBottom_toBottomOf="@+id/image_1_waffle_2"
+            app:layout_constraintStart_toStartOf="@+id/image_1_waffle_2"
+            app:srcCompat="@drawable/store_waffle_2" />
 
         <ImageView
-            android:id="@+id/image_4_waffle_1"
+            android:id="@+id/image_4_waffle_2"
             android:layout_width="62dp"
             android:layout_height="56dp"
             android:layout_marginStart="12dp"
-            app:layout_constraintStart_toEndOf="@+id/image_3_waffle_1"
-            app:layout_constraintTop_toTopOf="@+id/image_3_waffle_1"
-            app:srcCompat="@drawable/store_waffle_1" />
+            app:layout_constraintStart_toEndOf="@+id/image_3_waffle_2"
+            app:layout_constraintTop_toTopOf="@+id/image_3_waffle_2"
+            app:srcCompat="@drawable/store_waffle_2" />
 
         <ImageView
-            android:id="@+id/image_1_keks_1"
+            android:id="@+id/image_3_keks_1"
             android:layout_width="46dp"
             android:layout_height="65dp"
             android:layout_marginStart="232dp"
@@ -361,13 +369,13 @@
             app:srcCompat="@drawable/store_keks_1" />
 
         <ImageView
-            android:id="@+id/image_3_keks_1"
+            android:id="@+id/image_1_keks_1"
             android:layout_width="46dp"
             android:layout_height="65dp"
             android:layout_marginStart="26dp"
             android:layout_marginBottom="48dp"
-            app:layout_constraintBottom_toBottomOf="@+id/image_1_keks_1"
-            app:layout_constraintStart_toStartOf="@+id/image_1_keks_1"
+            app:layout_constraintBottom_toBottomOf="@+id/image_3_keks_1"
+            app:layout_constraintStart_toStartOf="@+id/image_3_keks_1"
             app:srcCompat="@drawable/store_keks_1" />
 
         <ImageView
@@ -375,8 +383,8 @@
             android:layout_width="46dp"
             android:layout_height="65dp"
             android:layout_marginStart="4dp"
-            app:layout_constraintBottom_toBottomOf="@+id/image_1_keks_1"
-            app:layout_constraintStart_toEndOf="@+id/image_1_keks_1"
+            app:layout_constraintBottom_toBottomOf="@+id/image_3_keks_1"
+            app:layout_constraintStart_toEndOf="@+id/image_3_keks_1"
             app:srcCompat="@drawable/store_keks_1" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
