@@ -20,9 +20,12 @@
             android:name=".Separation_Puzzle"
             android:screenOrientation="landscape"
             />
-        <activity android:name=".Puzzles" />
         <activity
-            android:name=".StorePuzzle.Main"
+            android:name=".Puzzles"
+            android:screenOrientation="landscape"
+            />
+        <activity
+            android:name=".StorePuzzle.Store_Main"
             android:screenOrientation="landscape"
             ></activity>
         <activity

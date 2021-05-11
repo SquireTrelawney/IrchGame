@@ -5,14 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/store_background"
-    >
 
+    >
+    <!--    android:keyboardNavigationCluster="false" -->
     <Button
         android:id="@+id/btnCookie_2"
-        android:layout_width="197dp"
-        android:layout_height="105dp"
+        android:layout_width="138dp"
+        android:layout_height="72dp"
         android:layout_marginBottom="5dp"
         android:background="#00FFFFFF"
+        android:onClick="onClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnBread"
         app:layout_constraintTop_toTopOf="parent"
@@ -20,100 +22,109 @@
 
     <Button
         android:id="@+id/btnBun"
-        android:layout_width="185dp"
-        android:layout_height="115dp"
+        android:layout_width="132dp"
+        android:layout_height="84dp"
         android:layout_marginBottom="5dp"
         android:background="#00FFFFFF"
+        android:onClick="onClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnCake"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.94" />
+        app:layout_constraintVertical_bias="0.944" />
 
     <Button
         android:id="@+id/btnCake"
-        android:layout_width="202dp"
-        android:layout_height="104dp"
-        android:layout_marginEnd="36dp"
+        android:layout_width="148dp"
+        android:layout_height="73dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginBottom="5dp"
         android:background="#00FFFFFF"
+        android:onClick="onClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.951" />
+        app:layout_constraintVertical_bias="0.949" />
 
     <Button
         android:id="@+id/btnKeks"
-        android:layout_width="212dp"
-        android:layout_height="140dp"
-        android:layout_marginStart="468dp"
-        android:layout_marginBottom="5dp"
+        android:layout_width="145dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="340dp"
+        android:layout_marginBottom="14dp"
         android:background="#00FFFFFF"
+        android:onClick="onClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.468" />
+        app:layout_constraintVertical_bias="0.508" />
 
     <Button
         android:id="@+id/btnWaffle_1"
-        android:layout_width="142dp"
-        android:layout_height="154dp"
-        android:layout_marginStart="272dp"
+        android:layout_width="98dp"
+        android:layout_height="113dp"
+        android:layout_marginStart="200dp"
         android:layout_marginBottom="5dp"
         android:background="#00FFFFFF"
+        android:onClick="onClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.485" />
+        app:layout_constraintVertical_bias="0.465" />
 
     <Button
         android:id="@+id/btnCakeFull"
-        android:layout_width="184dp"
-        android:layout_height="144dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginBottom="5dp"
+        android:layout_width="126dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="15dp"
         android:background="#00FFFFFF"
+        android:onClick="onClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.473" />
+        app:layout_constraintVertical_bias="0.508" />
 
     <Button
         android:id="@+id/btnBread"
-        android:layout_width="111dp"
-        android:layout_height="138dp"
-        android:layout_marginStart="396dp"
-        android:layout_marginTop="372dp"
+        android:layout_width="81dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="284dp"
+        android:layout_marginTop="283dp"
         android:background="#00FFFFFF"
+        android:onClick="onClick"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnWaffle_2"
-        android:layout_width="171dp"
-        android:layout_height="107dp"
+        android:layout_width="122dp"
+        android:layout_height="78dp"
         android:layout_marginStart="4dp"
         android:layout_marginBottom="5dp"
         android:background="#00FFFFFF"
+        android:onClick="onClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnCookie_1"
         app:layout_constraintTop_toTopOf="parent"
+
         app:layout_constraintVertical_bias="0.946" />
 
     <Button
         android:id="@+id/btnCookie_1"
-        android:layout_width="170dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="36dp"
+        android:layout_width="113dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="24dp"
         android:layout_marginBottom="5dp"
         android:background="#00FFFFFF"
+        android:onClick="onClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.945" />
+        app:layout_constraintVertical_bias="0.949" />
 
     <TableRow
-        android:layout_width="578dp"
-        android:layout_height="81dp"
+        android:layout_width="336dp"
+        android:layout_height="54dp"
         android:background="@drawable/store_types"
         android:saveEnabled="true"
         android:scaleX="1"
@@ -127,96 +138,89 @@
         app:layout_constraintVertical_bias="0.074">
 
         <Space
-            android:layout_width="78dp"
+            android:layout_width="42dp"
             android:layout_height="match_parent" />
 
         <TextView
             android:id="@+id/text_cookie_1"
-            android:layout_width="63dp"
+            android:layout_width="42dp"
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="0/4"
             android:textAlignment="center"
-            android:textSize="24sp" />
+            android:textSize="15sp" />
 
         <Space
-            android:layout_width="68dp"
+            android:layout_width="42dp"
             android:layout_height="match_parent" />
 
         <TextView
             android:id="@+id/text_keks"
-            android:layout_width="65dp"
+            android:layout_width="38dp"
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="0/4"
             android:textAlignment="center"
-            android:textSize="24sp" />
+            android:textSize="15sp" />
 
         <Space
-            android:layout_width="81dp"
+            android:layout_width="37dp"
             android:layout_height="match_parent" />
 
         <TextView
-            android:id="@+id/text_oreo"
-            android:layout_width="61dp"
+            android:id="@+id/text_waffle_2"
+            android:layout_width="42dp"
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="0/4"
             android:textAlignment="center"
-            android:textSize="24sp" />
+            android:textSize="15sp" />
 
         <Space
-            android:layout_width="79dp"
+            android:layout_width="38dp"
             android:layout_height="match_parent" />
 
         <TextView
             android:id="@+id/text_cookie_2"
-            android:layout_width="56dp"
+            android:layout_width="42dp"
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="0/4"
             android:textAlignment="center"
-            android:textSize="24sp" />
+            android:textSize="15sp" />
 
     </TableRow>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="402dp"
-        android:layout_height="184dp"
-        android:layout_marginTop="144dp"
-        android:layout_marginEnd="40dp"
+        android:layout_width="261dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/image_2_keks_1"
-            android:layout_width="46dp"
-            android:layout_height="65dp"
-            android:layout_marginStart="4dp"
-            app:layout_constraintStart_toEndOf="@+id/image_3_keks_1"
-            app:layout_constraintTop_toTopOf="@+id/image_3_keks_1"
-            app:srcCompat="@drawable/store_keks_1" />
 
         <ImageView
-            android:id="@+id/image_2_cookie_1"
-            android:layout_width="64dp"
-            android:layout_height="74dp"
+            android:id="@+id/image_3_cookie_1"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
             android:layout_alignTop="@+id/image_1_cookie_1"
             android:layout_alignBottom="@+id/image_1_cookie_1"
+            android:layout_marginStart="30dp"
             android:layout_toRightOf="@id/image_1_cookie_1"
             android:orientation="horizontal"
             android:rotation="50"
-            app:layout_constraintStart_toEndOf="@+id/image_3_cookie_1"
+            app:layout_constraintStart_toEndOf="@+id/image_1_cookie_1"
             app:layout_constraintTop_toTopOf="@+id/image_1_cookie_1"
             app:srcCompat="@drawable/store_cookie_1" />
 
         <ImageView
-            android:id="@+id/image_3_cookie_1"
-            android:layout_width="64dp"
-            android:layout_height="74dp"
+            android:id="@+id/image_2_cookie_1"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
             android:layout_alignTop="@+id/image_1_cookie_1"
             android:layout_alignBottom="@+id/image_1_cookie_1"
-            android:layout_marginStart="64dp"
+            android:layout_marginStart="32dp"
             android:layout_toRightOf="@+id/image_1_cookie_1"
             android:orientation="horizontal"
             android:rotation="50"
@@ -226,12 +230,12 @@
 
         <ImageView
             android:id="@+id/image_1_cookie_1"
-            android:layout_width="64dp"
-            android:layout_height="74dp"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="20dp"
-            android:layout_marginBottom="112dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="80dp"
             android:orientation="horizontal"
             android:rotation="50"
 
@@ -241,11 +245,11 @@
 
         <ImageView
             android:id="@+id/image_4_cookie_1"
-            android:layout_width="64dp"
-            android:layout_height="74dp"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
             android:layout_alignTop="@+id/image_1_cookie_1"
             android:layout_alignBottom="@+id/image_1_cookie_1"
-            android:layout_marginStart="36dp"
+            android:layout_marginStart="23dp"
             android:layout_marginTop="20dp"
             android:layout_toRightOf="@+id/image_1_cookie_1"
             android:orientation="horizontal"
@@ -256,11 +260,11 @@
 
         <ImageView
             android:id="@+id/image_5_cookie_1"
-            android:layout_width="64dp"
-            android:layout_height="74dp"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
             android:layout_alignTop="@+id/image_1_cookie_1"
             android:layout_alignBottom="@+id/image_1_cookie_1"
-            android:layout_marginStart="72dp"
+            android:layout_marginStart="32dp"
             android:layout_toRightOf="@+id/image_1_cookie_1"
             android:orientation="horizontal"
             android:rotation="50"
@@ -270,10 +274,10 @@
 
         <ImageView
             android:id="@+id/image_1_cookie_2"
-            android:layout_width="58dp"
-            android:layout_height="71dp"
-            android:layout_marginStart="228dp"
-            android:layout_marginBottom="112dp"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="148dp"
+            android:layout_marginBottom="80dp"
             android:padding="0dp"
             android:paddingLeft="0dp"
             android:paddingTop="0dp"
@@ -284,10 +288,10 @@
             app:srcCompat="@drawable/store_cookie_2" />
 
         <ImageView
-            android:id="@+id/image_3_cookie_2"
-            android:layout_width="58dp"
-            android:layout_height="71dp"
-            android:layout_marginStart="44dp"
+            android:id="@+id/image_2_cookie_2"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="32dp"
             android:padding="0dp"
             android:paddingLeft="0dp"
             android:paddingTop="0dp"
@@ -298,86 +302,104 @@
             app:srcCompat="@drawable/store_cookie_2" />
 
         <ImageView
-            android:id="@+id/image_2_cookie_2"
-            android:layout_width="58dp"
-            android:layout_height="71dp"
-            android:layout_marginStart="96dp"
+            android:id="@+id/image_3_cookie_2"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="64dp"
             android:padding="0dp"
             android:paddingLeft="0dp"
             android:paddingTop="0dp"
             android:paddingEnd="0dp"
             android:scaleY="1.1"
             app:layout_constraintStart_toStartOf="@+id/image_1_cookie_2"
-            app:layout_constraintTop_toTopOf="@+id/image_3_cookie_2"
+            app:layout_constraintTop_toTopOf="@+id/image_2_cookie_2"
             app:srcCompat="@drawable/store_cookie_2" />
 
         <ImageView
-            android:id="@+id/image_1_waffle_1"
-            android:layout_width="62dp"
-            android:layout_height="56dp"
-            android:layout_marginStart="52dp"
-            android:layout_marginTop="116dp"
+            android:id="@+id/image_1_waffle_2"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="84dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/store_waffle_1" />
+            app:srcCompat="@drawable/store_waffle_2" />
 
         <ImageView
-            android:id="@+id/image_2_waffle_1"
-            android:layout_width="62dp"
-            android:layout_height="56dp"
+            android:id="@+id/image_2_waffle_2"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
             android:layout_marginStart="5dp"
-            app:layout_constraintStart_toEndOf="@+id/image_1_waffle_1"
-            app:layout_constraintTop_toTopOf="@+id/image_1_waffle_1"
-            app:srcCompat="@drawable/store_waffle_1" />
+            app:layout_constraintStart_toEndOf="@+id/image_1_waffle_2"
+            app:layout_constraintTop_toTopOf="@+id/image_1_waffle_2"
+            app:srcCompat="@drawable/store_waffle_2" />
 
         <ImageView
-            android:id="@+id/image_3_waffle_1"
-            android:layout_width="62dp"
-            android:layout_height="56dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginBottom="28dp"
-            app:layout_constraintBottom_toBottomOf="@+id/image_1_waffle_1"
-            app:layout_constraintStart_toStartOf="@+id/image_1_waffle_1"
-            app:srcCompat="@drawable/store_waffle_1" />
+            android:id="@+id/image_3_waffle_2"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/image_1_waffle_2"
+            app:layout_constraintStart_toStartOf="@+id/image_1_waffle_2"
+            app:srcCompat="@drawable/store_waffle_2" />
 
         <ImageView
-            android:id="@+id/image_4_waffle_1"
-            android:layout_width="62dp"
-            android:layout_height="56dp"
-            android:layout_marginStart="12dp"
-            app:layout_constraintStart_toEndOf="@+id/image_3_waffle_1"
-            app:layout_constraintTop_toTopOf="@+id/image_3_waffle_1"
-            app:srcCompat="@drawable/store_waffle_1" />
+            android:id="@+id/image_4_waffle_2"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@+id/image_3_waffle_2"
+            app:layout_constraintTop_toTopOf="@+id/image_3_waffle_2"
+            app:srcCompat="@drawable/store_waffle_2" />
+
+
 
         <ImageView
             android:id="@+id/image_1_keks_1"
-            android:layout_width="46dp"
-            android:layout_height="65dp"
-            android:layout_marginStart="232dp"
-            android:layout_marginBottom="10dp"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="@+id/image_3_keks_1"
+            app:layout_constraintStart_toStartOf="@+id/image_3_keks_1"
+            app:srcCompat="@drawable/store_keks_1" />
+        <ImageView
+            android:id="@+id/image_2_keks_1"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@+id/image_1_keks_1"
+            app:layout_constraintTop_toTopOf="@+id/image_1_keks_1"
+            app:srcCompat="@drawable/store_keks_1" />
+        <ImageView
+            android:id="@+id/image_3_keks_1"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="148dp"
+            android:layout_marginBottom="4dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/store_keks_1" />
 
         <ImageView
-            android:id="@+id/image_3_keks_1"
-            android:layout_width="46dp"
-            android:layout_height="65dp"
-            android:layout_marginStart="26dp"
-            android:layout_marginBottom="48dp"
-            app:layout_constraintBottom_toBottomOf="@+id/image_1_keks_1"
-            app:layout_constraintStart_toStartOf="@+id/image_1_keks_1"
-            app:srcCompat="@drawable/store_keks_1" />
-
-        <ImageView
             android:id="@+id/image_4_keks_1"
-            android:layout_width="46dp"
-            android:layout_height="65dp"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
             android:layout_marginStart="4dp"
-            app:layout_constraintBottom_toBottomOf="@+id/image_1_keks_1"
-            app:layout_constraintStart_toEndOf="@+id/image_1_keks_1"
+            app:layout_constraintBottom_toBottomOf="@+id/image_3_keks_1"
+            app:layout_constraintStart_toEndOf="@+id/image_3_keks_1"
             app:srcCompat="@drawable/store_keks_1" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageForMove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="410dp"
+        tools:srcCompat="@tools:sample/avatars" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

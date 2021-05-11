@@ -10,7 +10,7 @@
         android:background="@drawable/ozon"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         tools:layout_editor_absoluteX="183dp"
         tools:layout_editor_absoluteY="252dp"></LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
