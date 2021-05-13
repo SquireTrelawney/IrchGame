@@ -11,6 +11,8 @@ class Puzzles : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_puzzles)
         (View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY or View.SYSTEM_UI_FLAG_FULLSCREEN or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION).also { window.decorView.systemUiVisibility = it }
+//        val window = Intent(this, com.IrchGame.StorePuzzle.Store_Main::class.java)
+//        startActivity(window)
     }
 
     fun open_separation(view: View) {
