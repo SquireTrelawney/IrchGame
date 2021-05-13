@@ -22,7 +22,7 @@ class Puzzles : AppCompatActivity() {
     }
 
     fun open_store_puzzle(view: View){
-        val window = Intent(this, Store_Puzzle::class.java)
+        val window = Intent(this, com.IrchGame.StorePuzzle.Store_Main::class.java)
         startActivity(window)
     }
 

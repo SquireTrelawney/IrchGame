@@ -8,6 +8,7 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/ind"
         android:supportsRtl="true"
+<<<<<<< HEAD
         android:theme="@style/AppTheme">
         <activity android:name=".find_puzzle"></activity>
         <activity android:name=".find_diff_Puzzle" />
@@ -17,6 +18,34 @@
         <activity android:name=".Store_Puzzle" />
         <activity android:name=".StoryMap" />
         <activity android:name=".MainActivity">
+=======
+
+        android:screenOrientation="landscape"
+        android:theme="@style/AppTheme"
+        >
+        <activity
+            android:name=".shadows_puzzle"
+            android:screenOrientation="landscape"
+            ></activity>
+        <activity
+            android:name=".Separation_Puzzle"
+            android:screenOrientation="landscape"
+            />
+        <activity android:name=".Puzzles" />
+        <activity
+            android:name=".StorePuzzle.Store_Main"
+            android:screenOrientation="landscape"
+            ></activity>
+        <activity
+            android:name=".StoryMap"
+            android:screenOrientation="landscape"
+            />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="landscape"
+
+            >
+>>>>>>> e155dd6e3b2bc9a271bcda3224530986c4fcdee5
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

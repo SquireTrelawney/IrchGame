@@ -1,6 +1,5 @@
 package com.IrchGame
 
-import kotlinx.android.synthetic.main.activity_shadows_puzzle.*
 import kotlin.random.Random
 
 fun main(args : Array<String>){
