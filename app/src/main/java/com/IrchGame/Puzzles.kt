@@ -26,4 +26,9 @@ class Puzzles : AppCompatActivity() {
         startActivity(window)
     }
 
+    fun open_diff(view: View){
+        val window = Intent(this, find_puzzle::class.java)
+        startActivity(window)
+    }
+
 }
