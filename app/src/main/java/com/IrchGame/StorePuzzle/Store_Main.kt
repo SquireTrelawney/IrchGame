@@ -1,7 +1,7 @@
 package com.IrchGame.StorePuzzle
 
-import android.content.res.Resources
-import android.graphics.drawable.Drawable
+import android.media.AudioManager
+import android.media.SoundPool
 import android.os.Bundle
 import android.view.View
 import android.view.animation.Animation
@@ -20,6 +20,8 @@ class Store_Main : AppCompatActivity() {
     private lateinit var basketImages: Map<Int, List<ImageView>>
     private lateinit var moveImages: Map<Int, ImageView>
     private lateinit var counters: Map<Int, TextView>
+
+    private var soundPool = SoundPool(1, AudioManager.STREAM_MUSIC, 0)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -35,7 +37,11 @@ class Store_Main : AppCompatActivity() {
             R.id.btnCookie_1 to moveImg_cookie,
             R.id.btnCookie_2 to moveImg_cookie_2,
             R.id.btnWaffle_2 to moveImg_waffle,
-            R.id.btnKeks to moveImg_keks
+            R.id.btnKeks to moveImg_keks,
+            R.id.btnBread to moveImg_bread,
+            R.id.btnCake to moveImg_cake_1,
+            R.id.btnBun to moveImg_bun,
+            R.id.btnWaffle_1 to moveImg_waffle_1
         )
         basketImages = mapOf(
             R.id.btnCookie_1 to listOf(
@@ -58,6 +64,7 @@ class Store_Main : AppCompatActivity() {
                 image_3_keks_1,
                 image_4_keks_1
             )
+
         )
 //        countOfDonutsText.setText(countOfDonuts.toString())
         for((id, listsValue) in basketImages){
@@ -66,6 +73,8 @@ class Store_Main : AppCompatActivity() {
                 image.visibility = View.INVISIBLE
             }
         }
+        soundPool.load(this, R.raw.right, 0);
+        soundPool.load(this, R.raw.mistake, 0);
 
     }
 
@@ -75,60 +84,60 @@ class Store_Main : AppCompatActivity() {
             var count = 0
             for (img in basketImages[btnId]!!){
                 if((img.visibility == View.INVISIBLE)){
-
                     count++
                     var dist = 500F
-//                    moveImage(moveImages[btnId]!!, img, 0F, img.x + basket_layout.x - dist, 0F, img.y + basket_layout.y, false)
                     counters[btnId]?.text = count.toString() + "/" + basketImages[btnId]?.size
-                    val  moveAnimation = AnimationSet(false);
+                    val  moveAnimation = AnimationSet(false)
                     moveAnimation.addAnimation(moveImage(moveImages[btnId]!!, img, 0F, img.x + basket_layout.x - dist, 0F, img.y + basket_layout.y, false))
                     moveAnimation.addAnimation(moveImage(moveImages[btnId]!!, img, 0F,   moveImages[btnId]!!.x + dist, 0F, moveImages[btnId]!!.y, true))
                     moveImages[btnId]!!.startAnimation(moveAnimation)
+                    soundPool.play(1, 1F, 1F, 0, 0, 1F)
                     break
                 }
                 count++
             }
+        }else{
+
+
+            val x = moveImages[btnId]!!.x
+            val y = moveImages[btnId]!!.y
+            val  moveAnimation = AnimationSet(false)
+            moveAnimation.addAnimation(moveImage(moveImages[btnId]!!, null, 0F, 1700F, 0F, 400F, false))
+            moveAnimation.addAnimation(moveImage(moveImages[btnId]!!, null, 0F,   2 * x - 1700F, 0F, 2 * y - 400F, true))
+            moveImages[btnId]!!.startAnimation(moveAnimation)
+            soundPool.play(2, 1F, 1F, 0, 0, 1F)
         }
     }
-//    , fromXDelta: Float, toXDelta: Float, fromYDelta: Float,toYDelta: Float
-    fun  moveImage( moveImg: ImageView, basketImage: ImageView, fromX: Float, toX: Float, fromY: Float, toY: Float,isEndTranslation: Boolean ): TranslateAnimation {
+
+    private fun  moveImage(moveImg: ImageView, basketImage: ImageView?, fromX: Float, toX: Float, fromY: Float, toY: Float,
+                   isEndTranslation: Boolean ): TranslateAnimation {
         val animation = TranslateAnimation( fromX,  toX - moveImg.x,  fromY, toY - moveImg.y )
         if (isEndTranslation) {
-            animation.duration = 1500
-            animation.startOffset = 1000
+            animation.duration = 300
+            animation.startOffset = 100
         }
-        else animation.duration = 2000
+        else animation.duration = 200
         animation.setAnimationListener(object: AnimationListener {
             override fun onAnimationStart(animation: Animation?) {
-//                if (!isEndTranslation)
                     moveImg.visibility = View.VISIBLE
             }
 
             override fun onAnimationEnd(animation: Animation?) {
-
                 if (isEndTranslation){
-
                     if (basketImage != null)
                         basketImage.visibility = View.VISIBLE
-                }else{
-
-//                    moveImage(moveImg, basketImage, toX - moveImg.x, toX + 500F, toY - moveImg.y, toY, true)
                 }
                 moveImg.visibility = View.INVISIBLE
             }
 
-            override fun onAnimationRepeat(animation: Animation?) {
-
-            }
-
-        });
+            override fun onAnimationRepeat(animation: Animation?) {}
+        })
         animation.fillAfter = false
-//        moveImg.startAnimation(animation)
         return animation
     }
 
-    private fun checkEndGame() {
-    }
+//    private fun checkEndGame() {
+//    }
 
 
 }
