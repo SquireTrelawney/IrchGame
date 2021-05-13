@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fon1_100"
+    android:background="@drawable/menu_background"
     android:gravity="bottom"
     android:rotation="0"
     android:scaleX="1"
@@ -13,33 +14,39 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button6"
-        android:layout_width="417dp"
-        android:layout_height="95dp"
-        android:layout_margin="20dp"
-        android:background="@drawable/b1_8"
+        android:id="@+id/btn_storyMode"
+        android:layout_width="215dp"
+        android:layout_height="236dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginBottom="52dp"
+        android:background="#00FFFFFF"
         android:fontFamily="serif"
+
         android:includeFontPadding="true"
         android:onClick="open_map"
-        android:text="@string/история"
         android:textAlignment="gravity"
+
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#C50BE4"
-
         android:textColorHighlight="#2EE619"
         android:textDirection="ltr"
         android:textIsSelectable="true"
-
         android:textScaleX="1"
         android:textSize="40sp"
-        android:textStyle="normal" />
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button7"
-        android:layout_width="217dp"
-        android:layout_height="82dp"
-        android:background="@drawable/budda_8"
-        android:onClick="open_puzzles" />
+        android:id="@+id/btn_puzzlesMode"
+        android:layout_width="219dp"
+        android:layout_height="229dp"
+        android:layout_marginEnd="164dp"
+        android:layout_marginBottom="52dp"
+        android:background="#00FFFFFF"
+        android:onClick="open_puzzles"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
