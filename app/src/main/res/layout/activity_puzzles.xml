@@ -8,36 +8,34 @@
     android:orientation="horizontal"
     tools:context=".Puzzles">
 
-    <Button
+    <com.IrchGame.MenuButton
         android:id="@+id/btn_piramyde"
         android:layout_width="208dp"
         android:layout_height="207dp"
         android:layout_marginStart="564dp"
         android:layout_marginTop="124dp"
         android:background="@drawable/img_piramyde"
-        android:onClick="open_shadows"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <com.IrchGame.MenuButton
         android:id="@+id/btn_store"
         android:layout_width="208dp"
         android:layout_height="207dp"
         android:layout_marginStart="52dp"
         android:layout_marginTop="125dp"
         android:background="@drawable/img_store"
-        android:onClick="open_store_puzzle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <com.IrchGame.MenuButton
         android:id="@+id/btn_iceCream"
         android:layout_width="208dp"
         android:layout_height="207dp"
         android:layout_marginStart="313dp"
         android:layout_marginTop="125dp"
         android:background="@drawable/img_ice_cream"
-        android:onClick="open_separation"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
