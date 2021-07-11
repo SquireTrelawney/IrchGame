@@ -14,7 +14,7 @@
         android:layout_height="207dp"
         android:layout_marginStart="564dp"
         android:layout_marginTop="124dp"
-        android:background="@drawable/img_piramyde"
+        android:background="@drawable/puzzles_piramyde"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,7 +25,7 @@
         android:layout_height="207dp"
         android:layout_marginStart="52dp"
         android:layout_marginTop="125dp"
-        android:background="@drawable/img_store"
+        android:background="@drawable/puzzles_store"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,7 +35,7 @@
         android:layout_height="207dp"
         android:layout_marginStart="313dp"
         android:layout_marginTop="125dp"
-        android:background="@drawable/img_ice_cream"
+        android:background="@drawable/puzzles_ice_cream"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

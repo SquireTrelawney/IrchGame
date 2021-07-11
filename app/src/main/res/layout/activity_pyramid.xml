@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="828dp"
+    android:layout_height="match_parent"
+    android:background="@drawable/pyramid_background_sky2"
+    tools:context=".PyramidPuzzle.PyramidActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pyramid_fakeLayout"
+        android:layout_width="828dp"
+        android:layout_height="393dp"
+        android:layout_marginBottom="393dp"
+        android:background="@drawable/pyramid_background_sky1"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pyramid_gameLayout"
+        android:layout_width="828dp"
+        android:layout_height="393dp"
+        android:background="@drawable/pyramid_background_ground"
+        android:onClick="addBlock"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/defaultImage"
+            android:layout_width="295dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="92dp"
+            android:layout_marginEnd="152dp"
+            android:scaleX="1.1"
+            android:scaleY="1.1"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/pyramid_block1" />
+
+        <!--        <Button-->
+        <!--            android:id="@+id/button"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="64dp"-->
+        <!--            android:layout_marginBottom="36dp"-->
+
+        <!--            android:text="Button"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/scoreView"
+        android:layout_width="75dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/pyramid_score"
+        android:fontFamily="@font/vag_world"
+        android:text="0/25"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/menuButton"
+        app:layout_constraintTop_toTopOf="@+id/menuButton"
+        tools:text="0/25" />
+
+    <com.IrchGame.MenuButton
+        android:id="@+id/menuButton"
+        android:layout_width="42dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/pyramid_menu_button"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

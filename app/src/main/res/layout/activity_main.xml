@@ -5,11 +5,8 @@
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/menu_background"
+    android:background="#77489C"
     android:gravity="bottom"
-    android:rotation="0"
-    android:scaleX="1"
-    android:scaleY="1"
     app:layoutDescription="@xml/activity_main_scene"
     tools:context=".MainActivity">
 
@@ -19,21 +16,8 @@
         android:layout_height="236dp"
         android:layout_marginStart="144dp"
         android:layout_marginBottom="52dp"
-        android:background="#00FFFFFF"
-        android:fontFamily="serif"
-
-        android:includeFontPadding="true"
-        android:textAlignment="gravity"
-
-        android:textAllCaps="false"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="#C50BE4"
-        android:textColorHighlight="#2EE619"
-        android:textDirection="ltr"
-        android:textIsSelectable="true"
-        android:textScaleX="1"
-        android:textSize="40sp"
-        android:textStyle="normal"
+        android:background="@drawable/menu_history"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -43,7 +27,7 @@
         android:layout_height="229dp"
         android:layout_marginEnd="164dp"
         android:layout_marginBottom="52dp"
-        android:background="#00FFFFFF"
+        android:background="@drawable/menu_games"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
