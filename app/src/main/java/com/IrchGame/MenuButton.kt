@@ -1,8 +1,10 @@
 package com.IrchGame
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.util.AttributeSet
+import android.view.ViewGroup
 import android.view.animation.Animation
 import android.view.animation.ScaleAnimation
 import androidx.appcompat.widget.AppCompatButton
@@ -11,6 +13,7 @@ import androidx.core.content.ContextCompat.startActivity
 
 class MenuButton : AppCompatButton {
     private var intent: Intent? = null
+    private var activity: Activity? = null
     constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(
         context,
         attrs,
@@ -20,12 +23,13 @@ class MenuButton : AppCompatButton {
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs)
     constructor(context: Context?) : super(context!!)
 
-    fun init(intent: Intent){
+    fun init(intent: Intent, activity: Activity){
         this.intent = intent
+        this.activity = activity
         setOnClickListener { scaleAnimate(true) }
     }
 
-    private fun scaleAnimate(isFirstAnimation: Boolean) {
+    fun scaleAnimate(isFirstAnimation: Boolean = true) {
         val scaleAnimation: ScaleAnimation = if (isFirstAnimation) ScaleAnimation(
             1f,
             1.1f,
@@ -50,12 +54,12 @@ class MenuButton : AppCompatButton {
             setAnimationListener(object: Animation.AnimationListener{
                 override fun onAnimationStart(animation: Animation?) {
                 }
-
                 override fun onAnimationEnd(animation: Animation?) {
                     if(isFirstAnimation)
                         scaleAnimate(false)
                     else {
                         startActivity(context, intent!!, null)
+                        activity?.finish()
                     }
                 }
 

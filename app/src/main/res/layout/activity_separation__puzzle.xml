@@ -6,18 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/fon"
     tools:context=".Separation_Puzzle">
-
-<!--    <Button-->
-<!--        android:id="@+id/button_right"-->
-<!--        android:layout_width="188dp"-->
-<!--        android:layout_height="91dp"-->
-<!--        android:layout_marginEnd="68dp"-->
-<!--        android:onClick="switch_right"-->
-<!--        android:text="right"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/imageView7"-->
-<!--        app:layout_constraintVertical_bias="0.638" />-->
+    >
 
     <ImageView
         android:id="@+id/ice_right_2"
@@ -191,17 +180,4 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/dlz_itog"
         tools:srcCompat="@drawable/dlz_itog" />
-
-    <!--    <Button-->
-<!--        android:id="@+id/button_left"-->
-<!--        android:onClick="switch_left"-->
-<!--        android:layout_width="188dp"-->
-<!--        android:layout_height="91dp"-->
-<!--        android:layout_marginStart="80dp"-->
-<!--        android:text="@string/left"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/imageView6"-->
-<!--        app:layout_constraintVertical_bias="0.64" />-->
-
 </androidx.constraintlayout.widget.ConstraintLayout>
