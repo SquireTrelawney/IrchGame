@@ -9,8 +9,8 @@ import android.view.animation.TranslateAnimation
 class BackgroundAnimator {
     var isFieldCleared = false
     fun updateBackground(view: View, newBackground: Drawable, blockManager: BlockManager){
-        var downAnimation = TranslateAnimation(0F, 0F, 0F, view.layoutParams.height.toFloat())
-        downAnimation.duration = 1500
+        var downAnimation = TranslateAnimation(0F, 0F, 0F, blockManager.borders.bottomBorder.toFloat())
+        downAnimation.duration = 2500
         downAnimation.setAnimationListener(object: Animation.AnimationListener{
             override fun onAnimationStart(animation: Animation?) {
 
@@ -27,7 +27,7 @@ class BackgroundAnimator {
 
             override fun onAnimationRepeat(animation: Animation?) {}
         })
-        var upAnimation = TranslateAnimation(0F, 0F, 0F, -view.layoutParams.height.toFloat())
+        var upAnimation = TranslateAnimation(0F, 0F, 0F, -blockManager.borders.bottomBorder.toFloat())
         upAnimation.setAnimationListener(object: Animation.AnimationListener{
             override fun onAnimationStart(animation: Animation?) {
 
@@ -40,8 +40,8 @@ class BackgroundAnimator {
 
             override fun onAnimationRepeat(animation: Animation?) {}
         })
-        upAnimation.startOffset = 1500
-        upAnimation.duration = 3000
+        upAnimation.startOffset = 2500
+        upAnimation.duration = 1500
         var animationSet = AnimationSet(true)
         animationSet.addAnimation(upAnimation)
         animationSet.addAnimation(downAnimation)

@@ -89,7 +89,7 @@ class Separation_Puzzle : AppCompatActivity(), GestureDetector.OnGestureListener
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_separation__puzzle)
-
+        window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY or View.SYSTEM_UI_FLAG_FULLSCREEN or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION)
 
         mas = fill(obj1, obj2, obj3, obj4, obj5, obj6)
 
@@ -274,18 +274,12 @@ class Separation_Puzzle : AppCompatActivity(), GestureDetector.OnGestureListener
         else{
             game_over()
         }
-        println("score = " + score)
     }
 
     fun game_over(){
         game = false
-        if (score <= 4){
-//            textView_gameover.text = "Game Over"
-            image_loss.setVisibility(View.VISIBLE)
-        }
-        else{
-//            textView_gameover.text = "You Win!"
-            image_win.setVisibility(View.VISIBLE)
-        }
+        var myIntent = Intent(this, End_puzzle::class.java)
+        myIntent.putExtra("stars", lives)
+        startActivity(myIntent)
     }
 }

@@ -15,7 +15,7 @@ class Puzzles : AppCompatActivity() {
         setContentView(R.layout.activity_puzzles)
         (View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY or View.SYSTEM_UI_FLAG_FULLSCREEN or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION).also { window.decorView.systemUiVisibility = it }
         btn_store.init(Intent(this, com.IrchGame.StorePuzzle.Store_Main::class.java), this)
-//        btn_iceCream.init(Intent(this, Separation_Puzzle::class.java))
+        btn_iceCream.init(Intent(this, Separation_Puzzle::class.java), this)
         btn_piramyde.init(Intent(this, PyramidActivity::class.java), this)
     }
     override fun onBackPressed(){

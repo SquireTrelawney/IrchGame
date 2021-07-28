@@ -33,8 +33,8 @@ class BlockAnimator (borders: Borders){
             if (verticalPyramidBlock.checkGotDown()) {
                 canStartHorizontalAnimation = true;
                 verticalTimerTask.cancel()
-                verticalPyramidBlock.scaleX = 1f
-                verticalPyramidBlock.scaleY = 1.1f
+                verticalPyramidBlock.scaleX = 1.01f
+                verticalPyramidBlock.scaleY = 1.01f
             }
             else {
                 verticalPyramidBlock.fall()
@@ -59,15 +59,15 @@ class BlockAnimator (borders: Borders){
         canStartHorizontalAnimation = false;
         horizontalTimerTask.cancel()
         verticalTimer = Timer()
-        verticalPyramidBlock.scaleX = 0.98f
-        verticalPyramidBlock.scaleY = 1.098f
+        verticalPyramidBlock.scaleX = 0.96f
+        verticalPyramidBlock.scaleY = 0.96f
         verticalTimerTask  = MyTimerTask(
             object: MyAnimator{
                 override fun animate() {
                     verticalHandler.sendEmptyMessage(1)
                 }
             })
-        verticalTimer.schedule(verticalTimerTask, 0, 10)
+        verticalTimer.schedule(verticalTimerTask, 0, 9)
     }
 
 
@@ -80,7 +80,7 @@ class BlockAnimator (borders: Borders){
                 horizontalHandler.sendEmptyMessage(0)
             }
         })
-        horizontalTimer.schedule(horizontalTimerTask, 0, 10)
+        horizontalTimer.schedule(horizontalTimerTask, 0, 9)
     }
     fun stopAnimation(){
         verticalTimerTask  = MyTimerTask(

@@ -1,11 +1,12 @@
 package com.IrchGame.PyramidPuzzle
 import android.content.Intent
+import android.graphics.Point
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Message
 import android.view.View
-import android.view.animation.Animation
-import android.view.animation.RotateAnimation
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.IrchGame.End_puzzle
 import com.IrchGame.MainActivity
@@ -22,7 +23,7 @@ class PyramidActivity : AppCompatActivity() {
     var isSky2_onBackground = true
     var score = 0
     lateinit var myIntent: Intent
-    val target = 10
+    val target = 16
     lateinit var gameOverTimerTask: TimerTask
     var rotationDir = ""
     var deg = 10
@@ -40,6 +41,7 @@ class PyramidActivity : AppCompatActivity() {
             }
         }
     }
+    @RequiresApi(Build.VERSION_CODES.R)
     override fun onCreate(savedInstanceState: Bundle?) {
         PyramidBlock.blocksCounter = 0
         super.onCreate(savedInstanceState)
@@ -47,10 +49,14 @@ class PyramidActivity : AppCompatActivity() {
         window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY or View.SYSTEM_UI_FLAG_FULLSCREEN or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION)
         menuButton.init(Intent(this, MainActivity::class.java), this)
         scoreView.text = score.toString() + "/" + target
+        val display = windowManager.defaultDisplay
+        val size = Point()
+        display.getRealSize(size)
         blockManager = BlockManager(
-            pyramid_gameLayout, defaultImage, Borders(
-                pyramid_gameLayout.layoutParams.width,
-                pyramid_gameLayout.layoutParams.height
+            pyramid_gameLayout, defaultImage,
+            Borders(
+                size.x,
+                size.y
             )
         )
         blockManager.nextBlock()
@@ -66,15 +72,16 @@ class PyramidActivity : AppCompatActivity() {
                  blockManager.nextBlock()
                  if ((PyramidBlock.blocksCounter - 1) % blockManager.maxBlockQuantity == 0) {
                      backgroundAnimator.updateBackground(
-                         pyramid_gameLayout,
-                         pyramid_fakeLayout.background,
-                         blockManager
-                     )
-                     backgroundAnimator.updateBackground(
                          pyramid_fakeLayout,
                          mainLayout.background,
                          blockManager
                      )
+                     backgroundAnimator.updateBackground(
+                         pyramid_gameLayout,
+                         pyramid_fakeLayout.background,
+                         blockManager
+                     )
+
                      if (isSky2_onBackground) {
                          mainLayout.setBackgroundResource(R.drawable.pyramid_background_sky1)
                      } else {
@@ -96,7 +103,7 @@ class PyramidActivity : AppCompatActivity() {
                  }else{
 
                      if (abs(blockManager.isGameOver()) > blockManager.currentPyramidBlock.layoutParams.width) {
-                         PyramidBlock.blocksCounter = -PyramidBlock.blocksCounter
+                         PyramidBlock.blocksCounter = -3
                          deg = 45
                      }else{
                          if (blockManager.isGameOver() > 0) rotationDir = "RIGHT"

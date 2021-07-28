@@ -3,27 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLayout"
-    android:layout_width="828dp"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/pyramid_background_sky2"
     tools:context=".PyramidPuzzle.PyramidActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/pyramid_fakeLayout"
-        android:layout_width="828dp"
-        android:layout_height="393dp"
-        android:layout_marginBottom="393dp"
-        android:background="@drawable/pyramid_background_sky1"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/pyramid_gameLayout"
-        android:layout_width="828dp"
-        android:layout_height="393dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:background="@drawable/pyramid_background_ground"
         android:onClick="addBlock"
         android:visibility="visible"
@@ -32,12 +20,10 @@
 
         <ImageView
             android:id="@+id/defaultImage"
-            android:layout_width="295dp"
-            android:layout_height="58dp"
-            android:layout_marginTop="92dp"
-            android:layout_marginEnd="152dp"
-            android:scaleX="1.1"
-            android:scaleY="1.1"
+            android:layout_width="206dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="124dp"
+            android:layout_marginEnd="292dp"
             android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -56,6 +42,18 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pyramid_fakeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="393dp"
+        android:layout_marginBottom="393dp"
+        android:background="@drawable/pyramid_background_sky1"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <TextView
         android:id="@+id/scoreView"
         android:layout_width="75dp"
@@ -66,7 +64,7 @@
         android:fontFamily="@font/vag_world"
         android:text="0/25"
         android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
+        android:textColor="#77489C"
         android:textSize="18sp"
         android:visibility="visible"
         app:layout_constraintEnd_toStartOf="@+id/menuButton"

@@ -18,8 +18,8 @@ class BlockManager(gameLayout: ConstraintLayout, defaultView: ImageView, borders
     var borders = borders
     var gameLayout = gameLayout
     var nextPyramidBlock = PyramidBlock(defaultView, getDrawable(), borders)
-    var maxBlockQuantity = 5
-    var blocks =  arrayOf(nextPyramidBlock, null, null, null, null)
+    var maxBlockQuantity = 7
+    var blocks =  arrayOf(nextPyramidBlock, null, null, null, null, null, null, null)
     lateinit var currentPyramidBlock: PyramidBlock
     var gameOver = false
 
@@ -46,7 +46,8 @@ class BlockManager(gameLayout: ConstraintLayout, defaultView: ImageView, borders
     fun clearField(){
         blocks[0]?.setImageDrawable(blocks[maxBlockQuantity - 2]?.drawable)
         blocks[0]?.x = blocks[maxBlockQuantity - 2]?.x!!
-        blocks[0]?.y = borders.bottomBorder - defaultView.layoutParams.height - 75F
+        PyramidBlock.startGround = 0
+        blocks[0]?.y = borders.bottomBorder - defaultView.layoutParams.height.toFloat()
         for (i in 1 until maxBlockQuantity - 1){
             blocks[i]?.background = null
             gameLayout.removeView(blocks[i])
